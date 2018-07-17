@@ -1,0 +1,15 @@
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.btn-purple {
+  background: mediumpurple;
+    padding: 10px 40px;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+}

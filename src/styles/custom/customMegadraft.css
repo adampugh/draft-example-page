@@ -1,0 +1,34 @@
+.customMegadraft {
+    padding-bottom: 200px;
+    text-align: center;
+}
+
+.customMegadraft h2 {
+    font-size: 40px;
+    padding-bottom: 40px;
+}
+
+
+
+/*  remove all default sizes for element boxes */
+
+.block__content {
+    background-color: white;
+}
+
+.block__data, .dropdown__wrapper {
+    display: none;
+}
+
+.megadraft-editor .block__wrapper {
+    border: none;
+    box-shadow: none;
+}
+
+.megadraft-editor .block__content {
+    background: white;
+}
+
+.megadraft-editor .block__content:before, .megadraft-editor .block__content:after {
+    border: none;
+}

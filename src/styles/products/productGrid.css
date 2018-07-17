@@ -1,0 +1,21 @@
+.productGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 100px 0;
+}
+
+.productGrid__wrapper {
+    text-align: center;
+}
+
+.productGrid__wrapper h1 {
+    font-size: 40px;
+    padding: 100px 0 0 0;
+}
+
+
+@media (min-width: 600px) {
+    .productGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
