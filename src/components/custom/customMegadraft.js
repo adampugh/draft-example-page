@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { MegadraftEditor, editorStateFromRaw } from "megadraft";
 
 import "../../../node_modules/megadraft/dist/css/megadraft.css"
-import "../../styles/custom/customMegadraft.css";
+// import "../../styles/custom/customMegadraft.css";
 
 class CustomMegadraft extends Component {
     state = {

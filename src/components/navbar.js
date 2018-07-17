@@ -2,7 +2,7 @@ import React from "react";
 
 import ShoppingCart from "react-icons/lib/fa/shopping-cart";
 
-import "../styles/navbar.css";
+// import "../styles/navbar.css";
 
 const navbar = (props) => (
     <nav>

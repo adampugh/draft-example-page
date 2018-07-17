@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import Product from "./product";
 
-import "../../styles/products/productGrid.css";
+// import "../../styles/products/productGrid.css";
 
 class ProductGrid extends Component {
     state = {

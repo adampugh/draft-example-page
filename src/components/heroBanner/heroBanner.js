@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import HeroBannerMainText from "./heroBannerMainText";
 import HeroBannerTagline from "./heroBannerTagline";
 
-import "../../styles/heroBanner.css";
+// import "../../styles/heroBanner.css";
 
 class HeroBanner extends Component {
     
