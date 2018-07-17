@@ -32,3 +32,13 @@
 .megadraft-editor .block__content:before, .megadraft-editor .block__content:after {
     border: none;
 }
+
+
+/* mobile styles */
+
+@media (max-width: 600px) {
+    .megadraft-editor .sidebar {
+        z-index: 10;
+        left: 30px;
+    }
+}
