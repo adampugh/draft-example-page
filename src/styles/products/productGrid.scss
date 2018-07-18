@@ -1,7 +1,12 @@
 .productGrid {
-    display: grid;
-    grid-template-columns: 1fr;
+    // display: grid;
+    // grid-template-columns: 1fr;
     padding: 100px 0;
+}
+
+.productGrid .product__wrapper {
+    width: 100%;
+    display: inline-block;
 }
 
 .productGrid__wrapper {
@@ -16,6 +21,10 @@
 
 @media (min-width: 600px) {
     .productGrid {
-        grid-template-columns: 1fr 1fr;
+        // grid-template-columns: 1fr 1fr;
+    }
+
+    .productGrid .product__wrapper {
+        width: 50%;
     }
 }
