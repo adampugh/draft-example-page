@@ -1,0 +1,30 @@
+.titleBlock span {
+    text-align: center;
+    font-size: 60px;
+    color: #121212;
+    line-height: 3.7rem;
+}
+
+.titleBlock {
+    text-align: center;
+    .title {
+        .megadraft-editor {
+            .public-DraftEditorPlaceholder-root {
+                text-align: center;
+                font-size: 60px;
+                position: inherit;
+            }
+        }
+    }
+}
+
+
+.titleBlock .DraftEditor-root 
+    .public-DraftEditorPlaceholder-root {
+        position: inherit;
+        .public-DraftEditorPlaceholder-inner {
+            text-align: center;
+            font-size: 60px;
+            position: unset;    
+        } 
+}

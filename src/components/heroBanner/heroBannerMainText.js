@@ -15,7 +15,8 @@ class HeroBannerMainText extends Component {
                 <Editor 
                     editorState={this.state.editorState} 
                     onChange={this.onChange}
-                    customStyleMap={colorStyleMap}    
+                    customStyleMap={colorStyleMap}
+                    placeholder="Default"    
                 />
             </h1>
         )

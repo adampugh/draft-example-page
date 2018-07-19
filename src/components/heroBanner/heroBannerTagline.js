@@ -10,7 +10,12 @@ class HeroBannerTagline extends Component {
 
     render() {
         return (
-            <h2><Editor editorState={this.state.editorState} onChange={this.onChange} /></h2>
+            <h2>
+                <Editor 
+                    editorState={this.state.editorState} 
+                    onChange={this.onChange} 
+                    placeholder="Tagline" />
+            </h2>
         )
     }
 }

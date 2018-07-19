@@ -13,7 +13,7 @@ class HeroBanner extends Component {
             <section className="heroBanner">
                 <HeroBannerMainText />
                 <HeroBannerTagline />
-                <button>SHOP NOW</button>
+                <button className="btn-purple">SHOP NOW</button>
             </section>
         );
     }

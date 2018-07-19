@@ -6,6 +6,8 @@ import HeroBanner from "./components/heroBanner/heroBanner";
 import ProductGrid from "./components/products/productGrid";
 // import CustomEditor from "./components/custom/customEditor";
 import CustomMegadraft from "./components/custom/customMegadraft";
+// import CustomDraggableMegadraft from "./components/custom/customDraggableMegadraft";
+
 
 import Footer from "./components/footer/footer";
 
@@ -37,6 +39,7 @@ class App extends Component {
             shopText="SHOP NOW" />
           <ProductGrid />
           <CustomMegadraft />
+          {/* <CustomDraggableMegadraft /> */}
           {/* <CustomEditor /> */}
           <Footer />
         {/* </DragDropContext> */}

@@ -60,6 +60,10 @@ class ProductGrid extends Component {
             return;
         };
 
+        if (window.innerWidth > 600) {
+            return;
+        };
+
         const reorder = (arr, startIndex, endIndex) => {
             const res = arr;
             const [removed] = res.splice(startIndex, 1);
@@ -79,7 +83,7 @@ class ProductGrid extends Component {
         });
     }
 
-    // make a board not a vertical list 
+    // render draggable component if on mobile -- if on desktop render non-draggable version
 
     render() {
         return (
@@ -92,7 +96,9 @@ class ProductGrid extends Component {
                                 className="productGrid container"
                                 ref={provided.innerRef}
                                 style={getListStyle(snapshot.isDraggingOver)}>
-                                {this.state.products.map((product, i) => 
+
+                                {   window.innerWidth < 600 
+                                    ? this.state.products.map((product, i) => 
                                     <Draggable key={product.id} draggableId={product.id} index={i}>
                                         {(provided, snapshot) => (
                                             <div
@@ -114,7 +120,18 @@ class ProductGrid extends Component {
                                             </div> 
                                         )}
                                     </Draggable>
-                                )}
+                                ) : this.state.products.map((product, i) => 
+                                    <div className="product__wrapper" key={product.id}>
+                                        <Product 
+                                            key={i + product.title}
+                                            price={product.price}
+                                            imgUrl={product.imgUrl}
+                                            description={product.description}
+                                            title={product.title} 
+                                        />
+                                    </div>
+                                )
+                                }
                                 {provided.placeholder}
                             </div>
                         )}
