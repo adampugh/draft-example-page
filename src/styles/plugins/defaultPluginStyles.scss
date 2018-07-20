@@ -1,15 +1,10 @@
-.megadraft-editor {
-    .block__wrapper {
-        border: none;
+// remove default styles from megadraft elements
+
+#customMegadraft {
+    .megadraft-editor {
+        .block__wrapper {
+            border: none;
+            box-shadow: none;
+        }
     }
-}
-
-.megadraft-editor .block__wrapper {
-    border: !important none;
-    background: red;
-}
-
-
-.product .megadraft-editor .block__wrapper {
-    border: none;
 }

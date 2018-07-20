@@ -19,7 +19,7 @@ class CustomMegadraft extends Component {
 
     render() {
         return (
-            <section className="customMegadraft container">
+            <section className="customMegadraft container" id="customMegadraft">
                 <MegadraftEditor 
                     editorState={this.state.editorState}
                     onChange={this.onChange}
