@@ -41,7 +41,7 @@ export default class ImageBlock extends Component {
           />
         </h1>
       </div>
-      // {/* </CommonBlock> */}
+      // </CommonBlock>
     );
   }
 }

@@ -11,5 +11,8 @@
 @import "./products/product";
 @import "./products/productGrid";
 
-@import "./plugins/title";
-@import "./plugins/products";
+@import "./plugins/title/title";
+@import "./plugins/products/products";
+@import "./plugins/products/productsModalBlock";
+
+@import "./plugins/defaultPluginStyles";

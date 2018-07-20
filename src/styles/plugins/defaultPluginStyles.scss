@@ -1,0 +1,15 @@
+.megadraft-editor {
+    .block__wrapper {
+        border: none;
+    }
+}
+
+.megadraft-editor .block__wrapper {
+    border: !important none;
+    background: red;
+}
+
+
+.product .megadraft-editor .block__wrapper {
+    border: none;
+}

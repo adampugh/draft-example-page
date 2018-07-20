@@ -8,13 +8,13 @@ import {MegadraftIcons, MegadraftPlugin} from "megadraft";
 const {BlockContent, BlockData, BlockInput, CommonBlock} = MegadraftPlugin;
 
 export default class ProductsBlock extends Component {
-  state = {
-    editorState: EditorState.createEmpty(),
-  }
+  // state = {
+  //   editorState: EditorState.createEmpty(),
+  // }
 
-  onChange = (editorState) => {
-      this.setState({editorState});
-  }
+  // onChange = (editorState) => {
+  //     this.setState({editorState});
+  // }
 
   
 
@@ -29,17 +29,17 @@ export default class ProductsBlock extends Component {
     ];
 
     return (
-      // <CommonBlock actions={blockActions} {...this.props}>
-      
-    <div>
-        
-        <div className="titleBlock">
-            <h1 className="">
-            PRODUCT TIME
-            </h1>
+      <CommonBlock actions={blockActions} {...this.props}>
+        <div className="product">  
+          <img src={this.props.data.src} />
+          <h1>{this.props.data.title}</h1>
+          <p>{this.props.data.description}</p>
+          <p>{this.props.data.price}</p>
+          <a href="#">
+            <button className="btn-purple">ADD TO CART</button>
+          </a>
         </div>
-      </div>
-      // {/* </CommonBlock> */}
+      </CommonBlock>
     );
   }
 }

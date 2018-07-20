@@ -6,14 +6,26 @@ import ProductsModal from "./productsModal";
 
 class ProductsButton extends Component {
     state={
+        // return added product to this state for passing as a prop
+        // might not need if val is passed through
+
+
         productsModalIsOpen: false,
+        // fetch this data via redux?
         products: [
             {
                 id: "erger",
-                imgUrl: "https://gracefitguide.com/img/products/3-1.png",
+                src: "https://gracefitguide.com/img/products/3-1.png",
                 price: "£2.40",
                 description: "This thing si good, This thing si good, This thing si good, This thing si good, This thing si good, This thing si good,",
-                title: "2 Mega Bundle"
+                title: "2 Mega Bundle",
+            },
+            {
+                id: "ergddddr",
+                src: "https://gracefitguide.com/img/products/3-1.png",
+                price: "£19.40",
+                description: "This thing si good, This thing si good, This thing si good, This thing si good, This thing si good, This thing si good,",
+                title: "Party Time"
             },
         ]
     }
@@ -22,12 +34,27 @@ class ProductsButton extends Component {
         // e.preventDefault();
 
         this.openProductsModal();
-        // this.setState({
-        //     productsModalIsOpen: true
-        // })
 
         // const data = {"type": "title"};
         // this.props.onChange(insertDataBlock(this.props.editorState, data));
+
+    }
+
+    // need a function that handles data recieved from modal 
+    // then dispatches insertDataBlock() w/ relevant data
+    addProductOnClick = (product) => {
+        const data = {
+            src: product.src,
+            title: product.title,
+            description: product.description,
+            price: product.price,
+            type: 'products',
+            display: 'medium'    
+        }
+
+        this.props.onChange(insertDataBlock(this.props.editorState, data));
+
+        this.closeProductsModal();
     }
 
     closeProductsModal = () => {
@@ -56,6 +83,8 @@ class ProductsButton extends Component {
                 <ProductsModal 
                     isOpen={this.state.productsModalIsOpen}
                     closeModal={this.closeProductsModal}
+                    products={this.state.products}
+                    addProduct={this.addProductOnClick}
                 />
                 <button className={this.props.className} onClick={this.onClick}>
                     <svg style={svgStyles} className="sidemenu__button__icon sidemenu__button__icon--cart">
