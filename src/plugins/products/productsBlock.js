@@ -1,18 +1,12 @@
-import React, {Component} from "react";
-import { Editor, EditorState, createWithContent } from "draft-js";
-import {MegadraftIcons, MegadraftPlugin} from "megadraft";
+import React, { Component } from "react";
+import { MegadraftIcons, MegadraftPlugin } from "megadraft";
+import { Draggable } from 'react-beautiful-dnd';
+
 
 // import "../../../node_modules/megadraft/dist/css/megadraft.css"
-const {BlockContent, BlockData, BlockInput, CommonBlock} = MegadraftPlugin;
+const { CommonBlock } = MegadraftPlugin;
 
 export default class ProductsBlock extends Component {
-  // state = {
-  //   editorState: EditorState.createEmpty(),
-  // }
-
-  // onChange = (editorState) => {
-  //     this.setState({editorState});
-  // }
 
   render(){
     const blockActions = [
@@ -24,17 +18,32 @@ export default class ProductsBlock extends Component {
     ];
 
     return (
-      <CommonBlock actions={blockActions} {...this.props}>
-        <div className="product">  
-          <img src={this.props.data.src} />
-          <h1>{this.props.data.title}</h1>
-          <p>{this.props.data.description}</p>
-          <p>{this.props.data.price}</p>
-          <a href="#">
-            <button className="btn-purple">ADD TO CART</button>
-          </a>
-        </div>
-      </CommonBlock>
+      
+      
+      <Draggable draggableId={String(Math.random())} index={0}>
+        {(provided, snapshot) => (
+          <div
+          ref={provided.innerRef}
+            {...provided.draggableProps}
+            {...provided.dragHandleProps}>
+            <CommonBlock 
+              actions={blockActions} 
+              {...this.props}
+            >
+              <div className="product">  
+                <img src={this.props.data.src} alt={this.props.data.title}/>
+                <h1>{this.props.data.title}</h1>
+                <p>{this.props.data.description}</p>
+                <p>{this.props.data.price}</p>
+                <a href="">
+                  <button className="btn-purple">ADD TO CART</button>
+                </a>
+              </div>
+            </CommonBlock>
+          </div>
+        )}
+        
+      </Draggable>
     );
   }
 }

@@ -5,7 +5,7 @@ import ProductsModal from "./productsModal";
 
 
 class ProductsButton extends Component {
-    state={
+    state = {
         // return added product to this state for passing as a prop
         // might not need if val is passed through
 
@@ -32,9 +32,8 @@ class ProductsButton extends Component {
 
     onClick = (e) => {
         // e.preventDefault();
-
         this.openProductsModal();
-
+        
         // const data = {"type": "title"};
         // this.props.onChange(insertDataBlock(this.props.editorState, data));
 
@@ -44,6 +43,7 @@ class ProductsButton extends Component {
     // then dispatches insertDataBlock() w/ relevant data
     addProductOnClick = (product) => {
         const data = {
+            // add current index from redux 
             src: product.src,
             title: product.title,
             description: product.description,
@@ -51,7 +51,8 @@ class ProductsButton extends Component {
             type: 'products',
             display: 'medium'    
         }
-
+        let component = insertDataBlock(this.props.editorState, data);
+        console.log(component);
         this.props.onChange(insertDataBlock(this.props.editorState, data));
 
         this.closeProductsModal();

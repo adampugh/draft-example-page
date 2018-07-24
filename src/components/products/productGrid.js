@@ -59,7 +59,8 @@ class ProductGrid extends Component {
         if (!result.destination) {
             return;
         };
-
+        
+        // don't run on desktop
         if (window.innerWidth > 600) {
             return;
         };
@@ -84,6 +85,7 @@ class ProductGrid extends Component {
     }
 
     // render draggable component if on mobile -- if on desktop render non-draggable version
+    // use isDropDisabled 
 
     render() {
         return (

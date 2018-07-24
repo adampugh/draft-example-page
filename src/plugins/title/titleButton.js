@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { insertDataBlock } from "megadraft";
 
-
 class BlockButton extends Component {
     onClick = (e) => {
         e.preventDefault();
@@ -26,5 +25,6 @@ class BlockButton extends Component {
         );
     }
 }
+
 
 export default BlockButton;
